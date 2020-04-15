@@ -11,8 +11,10 @@ navFile.send();
 <script>
   function wikiSearch(){
     var query = document.getElementById("searchQuery").value;
-    if (query === '')
+    if (query === "")
+    {
       return false;
+    }
     var link = "https://dragalialost.gamepedia.com/index.php?search=" + query;
     window.open(link, '_blank')
     return true;
