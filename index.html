@@ -13,21 +13,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+    <!-- Navigation Bar -->
+    <link rel="import" href="/navbar.html">
 
     <title>Home</title>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="./index.html">
-        <img src="https://gamepress.gg/dragalialost/sites/dragalialost/files/dragalialost-icon.png" height="30px" class="d-inline-block align-top" alt=""> Dragalia Lost
-      </a>
-      <div class="collapse navbar-collapse" id="navbar">
-
-                    <ul class="navbar-nav ml-auto mt-2">
-                        <li class="nav-item"><a class="nav-link" href="./music.html">Music</a></li>
-                    </ul>
-
-            </div>
-    </nav>
+    <div id="nav_bar"></div>
+    <script>
+      var navFile = new XMLHttpRequest();
+      navFile.open("GET", "./navbar.html", true);
+      navFile.onreadystatechange = function() {
+      if (navFile.readyState === 4) {  // Makes sure the document is ready to parse.
+        if (navFile.status === 200) {  // Makes sure it's found the file.
+          allText = navFile.responseText;
+          //lines = navFile.responseText.split("\n"); // Will separate each line into an array
+          var customTextElement = document.getElementById('nav_bar');
+          customTextElement.innerHTML = navFile.responseText;
+          console.log(navFile.responseText)
+        }
+      }
+      }
+    </script>
   </body>
 </html>
