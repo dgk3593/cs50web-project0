@@ -20,17 +20,17 @@
     <div id="nav_bar"></div>
     <script>
       var navFile = new XMLHttpRequest();
-      navFile.open("GET", "./navbar.html", true);
+      navFile.open("GET", "navbar.html", true);
       navFile.onreadystatechange = function() {
-      if (navFile.readyState === 1) {  // Makes sure the document is ready to parse.
-        if (navFile.status === 200) {  // Makes sure it's found the file.
-          allText = navFile.responseText;
-          //lines = navFile.responseText.split("\n"); // Will separate each line into an array
-          var customTextElement = document.getElementById('nav_bar');
-          customTextElement.innerHTML = navFile.responseText;
-          console.log(navFile.responseText)
+        if (navFile.readyState === 1) {  // Makes sure the document is ready to parse.
+          if (navFile.status === 200) {  // Makes sure it's found the file.
+            allText = navFile.responseText;
+            //lines = navFile.responseText.split("\n"); // Will separate each line into an array
+            var customTextElement = document.getElementById('nav_bar');
+            customTextElement.innerHTML = navFile.responseText;
+            console.log(navFile.responseText)
+          }
         }
-      }
       }
     </script>
   </body>
