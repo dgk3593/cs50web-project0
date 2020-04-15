@@ -21,14 +21,9 @@
     <script>
       var navFile = new XMLHttpRequest();
       navFile.onreadystatechange = function() {
-        if (navFile.readyState === 4) {  // Makes sure the document is ready to parse.
-          if (navFile.status === 200) {  // Makes sure it's found the file.
-            allText = navFile.responseText;
-            //lines = navFile.responseText.split("\n"); // Will separate each line into an array
-            var customTextElement = document.getElementById('nav_bar');
-            customTextElement.innerHTML = navFile.responseText;
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('nav_bar').innerHTML = navFile.responseText;
             console.log(navFile.responseText)
-          }
         }
       }
       navFile.open("GET", "navbar.html", true);
