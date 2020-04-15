@@ -5,6 +5,7 @@ function wikiSearch(){
     return false;
   }
   var link = "https://dragalialost.gamepedia.com/index.php?search=" + query;
+  console.log(link);
   window.open(link, '_blank')
   return true;
 }
