@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/styles.css">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">
-    <img src="images/DL-icon.png" height="30px" class="d-inline-block align-top" alt=""> Dragalia Lost
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/DL-icon.png" height="30px" class="d-inline-block align-bottom" alt="DL logo"> Dragalia Lost
   </a>
   <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -11,6 +11,16 @@
         <li class="nav-item"><a class="nav-link" href="adventurer.html">Adventurers</a></li>
         <li class="nav-item"><a class="nav-link" href="dragon.html">Dragons</a></li>
         <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Links
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://dragalialost.com/en/" target="_blank">Dragalia Lost US</a>
+            <a class="dropdown-item" href="https://comic.dragalialost.com/dragalialife/en/" target="_blank">Dragalia Life US</a>
+            <a class="dropdown-item" href="https://twitter.com/DragaliaLostApp?s=20" target="_blank">DL Twitter</a>
+          </div>
+        </li>
     </ul>
     <form class="form-inline my-2 my-sm-0">
       <input id="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search Gamepedia Wiki" aria-label="Search">

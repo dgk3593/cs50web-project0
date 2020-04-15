@@ -9,3 +9,26 @@ nav {
 body{
   background-color: black;
 }
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 30px;
+}
+
+.navbar-nav {
+  .nav-item:not(:last-child) {
+     border-right: 1px solid gray;
+     padding-right: 5px;
+   }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-item:not(:last-child) {
+    border-right: none;
+  }
+}
