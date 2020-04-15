@@ -7,15 +7,3 @@ navFile.onreadystatechange = function() {
 }
 navFile.open("GET", "navbar.html", true);
 navFile.send();
-
-
-function wikiSearch(){
-  var query = document.getElementById("searchQuery").value;
-  if (query === "")
-  {
-    return false;
-  }
-  var link = "https://dragalialost.gamepedia.com/index.php?search=" + query;
-  window.open(link, '_blank')
-  return true;
-}
