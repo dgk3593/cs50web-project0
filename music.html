@@ -23,31 +23,32 @@
     <script src="loadnavbar.js"></script>
 
     <!-- Music Player -->
-    <section class="audio-player card" style="margin-top:60px">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title col text-center">Dragalia Lost Songs</h2>
-                <div class="row align-items-center mt-4 mb-3 mx-0">
-                    <i id="play-button" class="material-icons play-pause text-primary mr-2" aria-hidden="true">play_circle_outline</i>
-                    <i id="pause-button" class="material-icons play-pause d-none text-primary mr-2" aria-hidden="true">pause_circle_outline</i>
-                    <i id="next-button" class="material-icons text-primary ml-2 mr-3" aria-hidden="true">skip_next</i>
-                    <div class="col ml-auto rounded border border-primary p-1">
-                        <img id="thumbnail" class="img-fluid rounded" src="images/DL-icon.png" alt="">
-                    </div>
-                </div>
-                <div class="p-0 m-0" id="now-playing">
-                    <p class="font-italic mb-0">Now Playing: </p>
-                    <p class="lead" id="title"></p>
-                </div>
-                <div class="progress-bar progress col-12 mb-3" style="height:0.8em; background-color: white">
-                </div>
+    <section class="audio-player card-group" style="margin-top:60px; max-width:1000px">
+        <div class="card" style="max-width:768px; min-width:426px;">
+          <div class="card-body text-center">
+            <div class="row mt-4 mb-4 mx-0">
+              <img id="thumbnail" class="card-img-top mx-auto rounded border border-primary p-1" src="images/DL-icon.png" class="img-fluid rounded" alt="" style="height:200px; width:200px">
             </div>
+            <p class="lead" id="title">Title goes here</p>
+            <div class="row align-items-center mt-4 mb-4 mx-auto">
+              <i id="previous-button" class="material-icons text-primary ml-auto mr-3" aria-hidden="true">skip_previous</i>
+              <i id="play-button" class="material-icons play-pause text-primary ml-2 mr-2" aria-hidden="true">play_circle_outline</i>
+              <i id="pause-button" class="material-icons play-pause d-none text-primary ml-2 mr-2" aria-hidden="true">pause_circle_outline</i>
+              <i id="next-button" class="material-icons text-primary ml-3 mr-auto" aria-hidden="true">skip_next</i>
+            </div>
+            <div class="progress-bar progress col-12 mb-3" style="height:0.8em; background-color: white">
+            </div>
+          </div>
+        </div>
+        <div class="card" style="max-width:768px; min-width:345px">
+          <div class="card-body">
             <ul class="playlist list-group list-group-flush">
                 <li audio_url="songs/Crasher.mp3" img_url="images/cover0.jpg" class="active list-group-item playlist-item">
                     CRASHER</li>
                 <li audio_url="songs/overture_hell.mp3" class="list-group-item playlist-item" img_url="images/cover0.jpg">
                     Overture</li>
             </ul>
+          </div>
         </div>
         <audio id="audio-player" class="d-none" src="" type="audio/mp3" controls="controls"></audio>
     </section>
