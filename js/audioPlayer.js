@@ -3,6 +3,7 @@ $(document).ready(function() {
   var playPause = $('.play-pause');
   var playButton = $('#play-button');
   var pauseButton = $('#pause-button');
+  var previousButton = $('#previous-button');
   var nextButton = $('#next-button');
   var audioPlayer = $('#audio-player');
   var thumbnail = $('#thumbnail');
@@ -61,7 +62,7 @@ $(document).ready(function() {
     audioPlayer['0'].currentTime = 0;
     audioPlayer['0'].play();
   }
-  
+
   // Load the Play Pause Button functionality
   playPause.click(function() {
     if (audioPlayer['0'].paused === true) {
