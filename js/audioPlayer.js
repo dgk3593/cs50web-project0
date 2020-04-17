@@ -70,7 +70,6 @@ $(document).ready(function() {
     }
     // Update UI
     thisSong.toggleClass('active');
-    console.dir( thisSong );
     // Set default value for dest
     if (dest !== 'this') {
       dest = 'previous';
