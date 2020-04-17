@@ -63,6 +63,40 @@ $(document).ready(function() {
     audioPlayer['0'].play();
   }
 
+  function previousTrack(dest) {
+    // Toggle Play/Pause button if paused
+    if (playButton.is(':visible')) {
+      togglePlayPause();
+    }
+    // Update UI
+    thisSong.toggleClass('active');
+    console.dir( thisSong );
+    // Set default value for dest
+    if (dest !== 'this') {
+      dest = 'previous';
+    }
+    // Update active playlist item NEXT
+    if (dest === 'previous') {
+      if (thisSong.is(':first-child')) {
+        thisSong = $('.playlist-item').last();
+      } else {
+        thisSong = thisSong.prev();
+      }
+    }
+    // Update active playlist item THIS
+    else if (dest === 'this') {
+      thisSong = $(this);
+    }
+    // Update src and UI
+    audioPlayer['0'].pause();
+    thisSong.toggleClass('active');
+    trackName();
+    audioPlayer.attr('src', thisSong.attr('audio_url'));
+    thumbnail.attr('src', thisSong.attr('img_url'));
+    // Reset time and play
+    audioPlayer['0'].currentTime = 0;
+    audioPlayer['0'].play();
+  }
   // Load the Play Pause Button functionality
   playPause.click(function() {
     if (audioPlayer['0'].paused === true) {
@@ -98,7 +132,12 @@ $(document).ready(function() {
   // NEXT button functionality
   nextButton.click(function() {
     audioPlayer['0'].pause();
-    nextTrack();
+    nextTrack()
+  });
+  // PREVIOUS button functionality
+  previousButton.click(function() {
+    audioPlayer['0'].pause();
+    previousTrack();
   });
 
   // Click on playlist items functionality

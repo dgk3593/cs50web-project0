@@ -36,6 +36,18 @@ li.active:before {
   font-size: 1.5rem;
 }
 
+.playlist li:nth-child(even) {
+  background-color: white;
+}
+
+.playlist li:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.playlist .list-group-item.active{
+  background-color: #007bff;
+}
+
 .ui-slider-handle {
   border-radius: 50%;
 }
