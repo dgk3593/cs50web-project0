@@ -1,4 +1,4 @@
-adv = [
+export let adv = [
 	{
 		id: '110050_02',
 		name: 'Hunter Berserker',
