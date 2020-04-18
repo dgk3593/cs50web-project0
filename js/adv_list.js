@@ -1,4 +1,4 @@
-export let adv = [
+adv = [
 	{
 		id: '110050_02',
 		name: 'Hunter Berserker',
@@ -1274,3 +1274,4 @@ export let adv = [
 		rarity: 3
 	}
 ];
+export default adv;
