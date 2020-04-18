@@ -50,7 +50,7 @@ adv = [
 	},
 	{
 		id: '110052_03',
-		name: 'Valentine's Orion',
+		name: 'Valentine Orion',
 		element: 'Flame',
 		weapon: 'Sword',
 		rarity: 3
@@ -197,7 +197,7 @@ adv = [
 	},
 	{
 		id: '110011_02',
-		name: 'Valentine's Ezelith',
+		name: 'Valentine Ezelith',
 		element: 'Flame',
 		weapon: 'Bow',
 		rarity: 4
@@ -239,7 +239,7 @@ adv = [
 	},
 	{
 		id: '110043_02',
-		name: 'Valentine's Hildegarde',
+		name: 'Valentine Hildegarde',
 		element: 'Flame',
 		weapon: 'Staff',
 		rarity: 5
@@ -610,7 +610,7 @@ adv = [
 	},
 	{
 		id: '110027_02',
-		name: 'Valentine's Melody',
+		name: 'Valentine Melody',
 		element: 'Wind',
 		weapon: 'Axe',
 		rarity: 5
@@ -1184,7 +1184,7 @@ adv = [
 	},
 	{
 		id: '110310_02',
-		name: 'Valentine's Addis',
+		name: 'Valentine Addis',
 		element: 'Shadow',
 		weapon: 'Bow',
 		rarity: 5
