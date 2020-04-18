@@ -1,4 +1,4 @@
-adv = [
+const adv = [
 	{
 		id: '110050_02',
 		name: 'Hunter Berserker',
