@@ -1210,7 +1210,7 @@ const adv = [
 	{
 		cid: '110326_01',
 		name: 'Natalie',
-		title: 'Devoted Festival Protégé',
+		title: 'Devoted Festival Protï¿½gï¿½',
 		element: 'Shadow',
 		weapon: 'Blade',
 		rarity: 5
